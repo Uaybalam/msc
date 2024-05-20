@@ -1,0 +1,143 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "magma-angular": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/magma-angular",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+
+
+            ],
+            "styles": [
+
+              "src/lib/animate/animate.min.css",
+              "src/lib/owlcarousel/assets/owl.carousel.min.css",
+              "src/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/scss/bootstrap.scss"
+
+              ],
+              "scripts": [
+                "node_modules/jquery/dist/jquery.min.js",
+                "src/lib/wow/wow.min.js",
+                "src/lib/easing/easing.min.js",
+                "src/lib/waypoints/waypoints.min.js",
+                "src/lib/counterup/counterup.min.js",
+                "src/lib/owlcarousel/owl.carousel.min.js",
+                "node_modules/owl.carousel/dist/owl.carousel.min.js",
+
+                "src/lib/tempusdominus/js/moment.min.js",
+                "src/lib/tempusdominus/js/moment-timezone.min.js",
+                "src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
+                "src/js/main.js"
+              ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "magma-angular:build:production"
+            },
+            "development": {
+              "browserTarget": "magma-angular:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "magma-angular:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+
+            "src/lib/animate/animate.min.css",
+            "src/lib/owlcarousel/assets/owl.carousel.min.css",
+            "src/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css",
+            "src/assets/css/bootstrap.min.css",
+            "src/styles.css",
+            "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/lib/wow/wow.min.js",
+              "src/lib/easing/easing.min.js",
+              "src/lib/waypoints/waypoints.min.js",
+              "src/lib/counterup/counterup.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
+
+              "src/lib/tempusdominus/js/moment.min.js",
+              "src/lib/tempusdominus/js/moment-timezone.min.js",
+              "src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
+              "src/js/main.js"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "1c1943ea-fe23-4737-9613-e90af21a887f"
+  }
+}

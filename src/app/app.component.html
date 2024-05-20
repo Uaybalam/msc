@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Posgrados Sistemas</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row align-items-center top-bar">
+            <div class="col-lg-3 col-md-12 text-center text-lg-start">
+                <a href="" class="navbar-brand m-0 p-0">
+                    <div class="logo"><img src="../assets/img/logo.png" alt="logo" width="550"></div>
+                </a>
+            </div>
+            <div class="col-lg-9 col-md-12 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                    <p class="m-0">Camino Arenero 1101, Col. El Bajio Zapopan, Jalisco, C.P. 45017</p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <i class="far fa-envelope-open text-primary me-2"></i>
+                    <p class="m-0"><a href="mailto:">contacto@tecnologico.com</a></p>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+
+<div class="nav-bar">
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="menu" [ngClass]="{ 'open': isMenuOpen }">
+    <li><a href="index.html" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Inicio</a></li>
+    <li><a href="#acercade"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Acerca de</a></li>
+    <li><a href="#servicio"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Servicios</a></li>
+    <li><a href="#contacto"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Contacto</a></li>
+  </ul>
+  <div class="ocultar">
+  <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
+    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 45px; height: 45px;">
+      <i class="fa fa-phone-alt text-primary"></i>
+    </div>
+    <div class="ms-3">
+      <p class="mb-1 text-white">Lun - Vie 9:00-17:00</p>
+      <h5 class="m-0 text-secondary">33-36-82-11-80</h5>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- Navbar End -->
+
+
+   <!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div id="owl-carousel2" class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="../assets/img/carousel-1.jpg" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">#TECSUPERIORJALISCO</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">Estudiante de posgrado en el Tecnológico Mario Molina Unidad Académica Zapopan</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Encontrarás un gran ambiente de aprendizaje y profesionales dedicados a la excelencia en educación.</p>
+                            <a href="#servicio" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Saber más</a>
+                            <a href="mailto:contacto@electrificacionesmagma.com" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="../assets/img/carousel-2.jpg" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">#TECSUPERIORJALISCO</h5>
+                            <h1 class="display-3 text-white animated slideInDown mb-4">Maestría en Sistemas Computacionales</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Formar líderes de excelencia con sólidos conocimientos en los Sistemas Computacionales, con un alto nivel competitivo que les permita analizar, diseñar y desarrollar software para coadyuvar en el desarrollo tecnológico, empresarial y de negocios. Participar en la toma de decisiones con una visión innovadora e integral que posibilite alcanzar una ventaja competitiva ante el entorno globalizado, con una perspectiva actual de la investigación en los campos relacionados con el Cómputo Ubicuo y los Sistemas Multimedia.</p>
+                            <a href="#servicio" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Saber más</a>
+                            <a href="mailto:contacto@electrificacionesmagma.com" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contactar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+
+    <!-- Service Start -->
+    
+    <div class="container-xxl py-5">
+        <div id="acercade" class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase">Acerca de</h6>
+                    <h1 class="mb-4">Desde que abrimos nuestras puertas hemos sido parte de la formación profesional de muchísimas personas.</h1>
+                    <p class="mb-4">Nuestro compromiso es ofrecerle una educación de calidad, una excelente capacitación y los recursos necesarios para brillar en el mundo actual. Contamos con planes flexibles y excelentes instructores. Estamos seguros de que estudiar en el Instituto Tecnológico Mario Molina Campus Zapopan le dejará grandes satisfacciones.</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Educación superior tecnológica de excelencia</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Innovación</p>
+                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Creatividad</p>
+                    <div class="bg-primary d-flex align-items-center p-4 mt-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                        </div>
+                        <div class="ms-3">
+                            <p class="fs-5 fw-medium mb-2 text-white">Lun - vie 9:00-17:00</p>
+                            <h3 class="m-0 text-secondary">33-36-82-11-80</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-4" style="min-height: 500px;">
+                    <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
+                        <img class="position-absolute img-fluid w-100 h-100" src="../assets/img/about-1.jpg" style="object-fit: cover; padding: 0 0 50px 100px;" alt="">
+                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="../assets/img/about-2.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <img src="../assets/img/PlanDeEstudios.webp" width="100%" alt="mapacurricular">
+        </div>
+    </div>
+    <div class="container-fluid fact bg-dark my-5 py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <i class="fa fa-check fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">20</h2>
+                    <p class="text-white mb-0">Años De Experiencia</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">20</h2>
+                    <p class="text-white mb-0">Proyectos Innovacion</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-users fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">35,000</h2>
+                    <p class="text-white mb-0">Egresados</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <i class="fa fa-building fa-2x text-white mb-3"></i>
+                    <h2 class="text-white mb-2" data-toggle="counter-up">254</h2>
+                    <p class="text-white mb-0">Institutos en el pais</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact End -->
+
+
+    <!-- Service Start -->
+    <div id="servicio" class="container-fluid py-5 px-4 px-lg-0">
+        <div class="row g-0">
+            <div class="col-lg-3 d-none d-lg-flex">
+                <div class="d-flex align-items-center justify-content-center bg-primary w-100 h-100">
+                    <h1 class="display-3 text-white m-0" style="transform: rotate(-90deg);">20 Años De Experiencia</h1>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-9">
+                <div class="ms-lg-5 ps-lg-5">
+                    <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">Mapa curricular</h6>
+                        <h1 class="mb-5">Maestría en Sistemas Computacionales</h1>
+                    </div>
+                    <div id="owl-carousel" class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <i class="fa fa-bolt fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Nucleo Basico</h4>
+                            <p>Desarrollar profesionistas con conocimientos y habilidades para el desarrollo e investigación en el área</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Teoría de la computación.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Análisis y diseño de algoritmos</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Tecnologías de programación.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Ingeniería de software.</p>
+                            <a href="" class="btn bg-white text-primary w-100 mt-2">Contactar<i class="fa fa-arrow-right text-secondary ms-2"></i></a>
+                        </div>
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <i class="fa fa-lightbulb fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Optativas Cómputo Ubicuo</h4>
+                            <p>Formar profesionales con una desarrollada capacidad para aplicar conocimiento científico tecnológico en su espacio de trabajo.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Diseño y administración de redes.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Soft Computing.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Computación ubicua.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Bases de datos y bases de conocimiento.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Sistemas operativos en tiempo real (RTOS).</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Modelado de Sistemas con Lenguaje Z</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Programación embebida.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Programación para dispositivos móviles.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Programación de protocolos de comunicación.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Tecnologías en Web semántica.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Interfaces humano - computadora.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Sistemas distribuidos.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Sistemas expertos.</p>
+                            <a href="" class="btn bg-white text-primary w-100 mt-2">Contactar<i class="fa fa-arrow-right text-secondary ms-2"></i></a>
+                        </div>
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <i class="fa fa-video fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Optativas Multimedia</h4>
+                            <p>Encauzar el desempeño profesional hacia una mayor comprensión de las necesidades.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Realidad virtual.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Gráficas por computadora.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Seminario de software multimedia.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Sistemas multiagentes.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Imágenes digitales.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Geometría computacional.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Modelados 3D.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Sistemas distribuidos.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Arquitectura de motores de videojuegos I.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Arquitectura de motores de videojuegos II.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Programación concurrente.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Diseño de interfaces.</p>
+                            <a href="" class="btn bg-white text-primary w-100 mt-2">Contactar<i class="fa fa-arrow-right text-secondary ms-2"></i></a>
+                        </div>
+                        <div class="bg-light p-4">
+                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
+                                <i class="fa fa-users fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Seminarios</h4>
+                            <p>Modelar, desarrollar e integrar sistemas en las áreas de multimedia y cómputo ubicuo, fundamentado en los aspectos de la investigación básica y aplicada.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Seminario I.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Seminario II.</p>
+                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Seminario III.</p>
+                            <a href="" class="btn bg-white text-primary w-100 mt-2">Contactar<i class="fa fa-arrow-right text-secondary ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Booking Start -->
+    <div class="container-fluid my-5 px-0" id="contacto">
+        <div class="video wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="text-white mb-4">¡Queremos saber de ti!</h1>
+        </div>
+        <div class="container position-relative wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -6rem;">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bg-light text-center p-5">
+                        <h1 class="mb-4">Contactanos</h1>
+                        <form (ngSubmit)="onSubmit()" name="contact" id="contact" [formGroup]="datosFacturacion">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input name="name" type="text" class="form-control border-0" id="nombre" placeholder="Tu nombre..." [(ngModel)]="datosFacturacion.nombre" formControlName="nombre" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input name="email" type="email" class="form-control border-0" id="email" placeholder="Tu email..." [(ngModel)]="datosFacturacion.email" formControlName="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" rows="6" class="form-control border-0" id="consulta" placeholder="Tu mensaje..." [(ngModel)]="datosFacturacion.message" formControlName="message" required></textarea>
+                                </div>
+                                <ngx-recaptcha2
+                                [siteKey]="'6LdBkKwnAAAAAO1glbTHQ7LrJK4I93lnz_31oYnc'"
+                                (success)="onHcaptchaSubmit($event)"></ngx-recaptcha2>
+
+                                <div class="col-12">
+                                    <input type="submit" id="form-submit" class="btn" name="enviar" value="Enviar" [disabled]="!captchaResuelto"(click)="contactoFormSubmitted = true">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase">Profesores</h6>
+                <h1 class="mb-5">Nucleo Academico</h1>
+            </div>
+            <div id="owl-carousel1" class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-1.webp" style="width: 100px; height: 100px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">Miriam Díaz Rodríguez</h5>
+                </div>
+                <div class="testimonial-item text-center">
+
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-2.webp" style="width: 100px; height: 100px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">Miguel Bernal Marin</h5>
+                </div>
+                <div class="testimonial-item text-center">
+
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-3.webp" style="width: 100px; height: 100px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">Federico A. Arias Zambrano</h5>
+                </div>
+                <div class="testimonial-item text-center">
+
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-4.webp" style="width: 100px; height: 100px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">José Antonio Aviña Méndez</h5>
+                </div>
+                <div class="testimonial-item text-center">
+
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-5.webp" style="width: 100px; height: 100px;">
+                    <div class="mb-2">
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                        <small class="fa fa-star text-secondary"></small>
+                    </div>
+                    <h5 class="mb-1">Adriana Tovar Arriaga</h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div id="contacto" class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Dirección</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Camino Arenero 1101, Col. El Bajio Zapopan, Jalisco, C.P. 45017</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>33-36-82-11-80</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>contacto@tecnologico.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Horario</h4>
+                    <h6 class="text-light">Lunes - Viernes:</h6>
+                    <p class="mb-4">09.00 AM - 05.00 PM</p>
+                    <!-- <h6 class="text-light">Saturday - Sunday:</h6>
+                    <p class="mb-0">09.00 AM - 12.00 PM</p> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">M. S. C.</h4>
+                    <a class="btn btn-link" href="">Edcore</a>
+                    <a class="btn btn-link" href="">Profesores</a>
+                    <a class="btn btn-link" href="">Alumnos</a>
+                    <a class="btn btn-link" href="">Mapa curricular</a>
+                    <a class="btn btn-link" href="">Adminision</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="index.html">Tecnologico superior de Jalisco</a>, Todos los derechos reservados.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+</body>
+
+</html>
