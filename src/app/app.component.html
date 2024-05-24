@@ -41,28 +41,24 @@
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid bg-light d-none d-lg-block">
+    <div class="logo-container">
+        <a href="" class="navbar-brand m-0 p-0">
+            <div class="logo"><img src="../assets/img/logo.png" alt="logo"></div>
+        </a>
+    </div>
+    <div class="container-fluid bg-light">
         <div class="row align-items-center top-bar">
-            <div class="col-lg-3 col-md-12 text-center text-lg-start">
-                <a href="" class="navbar-brand m-0 p-0">
-                    <div class="logo"><img src="../assets/img/logo.png" alt="logo" width="550"></div>
-                </a>
+            <div class="contact-info">
+                <i class="fa fa-map-marker-alt text-primary"></i>
+                <p>Camino Arenero 1101, Col. El Bajio Zapopan, Jalisco, C.P. 45017</p>
+                <i class="far fa-envelope-open text-primary"></i>
+                <p><a href="mailto:contacto@tecnologico.com">contacto@tecnologico.com</a></p>
             </div>
-            <div class="col-lg-9 col-md-12 text-end">
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="fa fa-map-marker-alt text-primary me-2"></i>
-                    <p class="m-0">Camino Arenero 1101, Col. El Bajio Zapopan, Jalisco, C.P. 45017</p>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="far fa-envelope-open text-primary me-2"></i>
-                    <p class="m-0"><a href="mailto:">contacto@tecnologico.com</a></p>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
+            <div class="social-icons">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
@@ -80,7 +76,8 @@
   <ul class="menu" [ngClass]="{ 'open': isMenuOpen }">
     <li><a href="index.html" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Inicio</a></li>
     <li><a href="#acercade"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Acerca de</a></li>
-    <li><a href="#servicio"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Servicios</a></li>
+    <li><a href="#servicio"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Mapa Curricular</a></li>
+    <li><a href="#details"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Proceso de Admisión</a></li>
     <li><a href="#contacto"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Contacto</a></li>
   </ul>
   <div class="ocultar">
@@ -291,6 +288,51 @@
         </div>
     </div>
     <!-- Service End -->
+    <section id="details"></section>
+    <!-- Adminision Start -->
+    <section>
+        <div class="admisiones" >
+            <h2>PROCEDIMIENTO DE INGRESO</h2>
+            <p>El procedimiento de selección de aspirantes a la Maestría en Sistemas Computacionales trata de asegurar el manifiesto interés de la persona por cursar este programa de estudios y que demuestre la capacidad, interés y factibilidad de concluirlos hasta la obtención del grado.</p>
+            <p>El procedimiento se detalla a continuación:</p>
+            <ul>
+                <li>
+                    <strong>Registrar solicitud de aspirante:</strong> Para el ingreso al Instituto Tecnológico José Mario Molina Pasquel y Henríquez Unidad Académica Zapopan se debe ingresar a la plataforma de admisión a través del siguiente enlace: <a href="https://admision.tsj.mx" target="_blank">admision.tsj.mx</a> y registrarse para iniciar su inscripción y poder integrar el expediente digital conforme la documentación solicitada del 6 de mayo al 12 de Julio de 2024.
+                </li>
+                <li>
+                    <strong>Pagar el registro:</strong> Descargar el comprobante de solicitud y realizar el pago del paquete de admisión (Examen de Admisión) por un monto de $1,700.00 (mil setecientos pesos mexicanos) en el banco o por transferencia electrónica, y el recibo de pago resultante deberá ser enviado a <a href="mailto:tesoreria@zapopan.tecmm.edu.mx">tesoreria@zapopan.tecmm.edu.mx</a>. Periodo de pago y registro de solicitudes del 6 de mayo al 12 de Julio de 2024.
+                </li>
+                <li>
+                    <strong>Entrevista con el Comité de Admisión:</strong> La finalidad es conocer la intención, motivación y razones por las que el aspirante desea ingresar al posgrado. Además, se trata de determinar la factibilidad de concluir con la totalidad de sus créditos para la obtención del grado en los tiempos y las formas, que determina el programa. Se contactará al aspirante vía telefónica para concertar la cita. Periodo para la presentación de entrevista del 06 de mayo al 12 de Julio de 2024.
+                </li>
+                <li>
+                    <strong>Curso propedéutico:</strong> La Unidad Académica correspondiente enviará información respecto a las fechas y formas en que se llevará a cabo. Curso propedéutico del 15 de Julio al 26 de julio de 2024.
+                </li>
+                <li>
+                    <strong>Realizar el examen de admisión EXANI III:</strong> Aplicación de examen de admisión viernes 16 de agosto de 2024 a las 09:00 hrs.
+                </li>
+                <li>
+                    <strong>Deliberación y entrega de documentación final:</strong> Además de subir la documentación a la página <a href="https://admision.tsj.mx" target="_blank">admision.tsj.mx</a>, se deberá entregar la documentación del expediente en la oficina de la División de Sistemas de la Unidad Académica Zapopan. La Comisión de Admisión emitirá una carta de aceptación o rechazo del aspirante y se le notificará. Periodo de emisión de cartas de aceptación del 19 de agosto de 2024.
+                </li>
+                <li>
+                    <strong>Pago de la matrícula:</strong> Los alumnos que reciban su carta aceptación deberán de cubrir la totalidad del monto de la matrícula semestral: $8,000.00 (ocho mil pesos mexicanos). La orden de pago podrá ser descargada de la página de <a href="https://admision.tsj.mx" target="_blank">admision.tsj.mx</a>. La ficha de pago deberá ser enviada al correo Del 20 al 23 de agosto de 2024.
+                </li>
+                <li>
+                    <strong>Inicio de clases:</strong> 30 de agosto de 2024.
+                </li>
+            </ul>
+            <h2>DURACIÓN DEL PROGRAMA</h2>
+            <p>La duración del programa de la Maestría en Sistemas Computacionales es de cuatro semestres, los cuales serán contados a partir del momento de inscripción.</p>
+            <h2>COSTOS</h2>
+            <ul>
+                <li>Solicitud de Trámites de ingreso (pago único): $1,700.00 (pesos mexicanos).</li>
+                <li>Matrícula semestral: $8,000.00</li>
+            </ul>
+            <h2>CONTACTOS PARA INFORMACIÓN</h2>
+            <p>División de investigación y posgrado: Teléfono: 3336821180 ext. 122. Correo electrónico: <a href="mailto:maestria.electronica@zapopan.tecmm.edu.mx">maestria.electronica@zapopan.tecmm.edu.mx</a></p>
+        </div>
+    </section>
+    <!-- Adminision End -->
 
 
     <!-- Booking Start -->
@@ -328,76 +370,106 @@
             </div>
         </div>
     </div>
+    <!-- booking end -->
+
+    <!-- Testimonial start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="text-secondary text-uppercase">Profesores</h6>
-                <h1 class="mb-5">Nucleo Academico</h1>
+                <h6 class="text-center h6">Profesores</h6>
+                <h1 class="text-center h1 mb-5">Nucleo Academico</h1>
             </div>
             <div id="owl-carousel1" class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item text-center">
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-1.webp" style="width: 100px; height: 100px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
+                    <div class="image-container">
+                        <img src="../assets/img/academico-1.webp">
+                        <div class="hover-effect">
+                            <div class="inner-content">
+                                <div class="mb-2">
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h5 class="mb-1">Miriam Díaz Rodríguez</h5>
+                    <h5>Miriam Díaz Rodríguez</h5>
                 </div>
                 <div class="testimonial-item text-center">
-
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-2.webp" style="width: 100px; height: 100px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
+                    <div class="image-container">
+                        <img src="../assets/img/academico-2.webp">
+                        <div class="hover-effect">
+                            <div class="inner-content">
+                                <div class="mb-2">
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h5 class="mb-1">Miguel Bernal Marin</h5>
+                    <h5>Miguel Bernal Marin</h5>
                 </div>
                 <div class="testimonial-item text-center">
-
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-3.webp" style="width: 100px; height: 100px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
+                    <div class="image-container">
+                        <img src="../assets/img/academico-3.webp">
+                        <div class="hover-effect">
+                            <div class="inner-content">
+                                <div class="mb-2">
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h5 class="mb-1">Federico A. Arias Zambrano</h5>
+                    <h5>Federico A. Arias Zambrano</h5>
                 </div>
                 <div class="testimonial-item text-center">
-
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-4.webp" style="width: 100px; height: 100px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
+                    <div class="image-container">
+                        <img src="../assets/img/academico-4.webp">
+                        <div class="hover-effect">
+                            <div class="inner-content">
+                                <div class="mb-2">
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                    <small class="fa fa-star text-secondary"></small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h5 class="mb-1">José Antonio Aviña Méndez</h5>
+                    <h5>José Antonio Aviña Méndez</h5>
                 </div>
                 <div class="testimonial-item text-center">
+                    <div class="image-container">
+                        <img src="../assets/img/academico-5.webp">
+                        <div class="hover-effect">
+                            <div class="inner-content">
+                                <div class="mb-2">
+                                    <p>
+                                        Profesora
 
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="../assets/img/academico-5.webp" style="width: 100px; height: 100px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
+                                        Ingeniera en Sistemas Computacionales, tras años de experiencia en el área industrial automotriz, decidí dar un giro a mi carrera para orientarme a la educación en ingeniería en la cuál tengo 14 años de experiencia. Estoy convencida que es la educación, investigación y desarrollo de tecnología propia llevaría a un progreso real y competitivo a nuestro país.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h5 class="mb-1">Adriana Tovar Arriaga</h5>
+                    <h5>Adriana Tovar Arriaga</h5>
                 </div>
-
             </div>
         </div>
     </div>
+    
+    
     <!-- Testimonial End -->
 
 
