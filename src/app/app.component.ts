@@ -12,7 +12,7 @@ declare var jQuery: any; // Declarar jQuery para evitar errores de tipo
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit{
-    title = 'magma-angular';
+    title = 'msc';
     datosFacturacion: any = {};
     captchaToken!: string;
     captchaResuelto: boolean= false;
@@ -22,6 +22,68 @@ export class AppComponent implements AfterViewInit{
     email: false,
     message: false,
   };
+
+  isModalOpen = false;
+  modalContent = '';
+
+  teachers = [
+    {
+      id: 1,
+      name: 'Miriam Díaz Rodríguez',
+      image: '../assets/img/academico-1.webp',
+      description: ''
+    },
+    {
+      id: 2,
+      name: 'Miguel Bernal Marin',
+      image: '../assets/img/academico-2.webp',
+      description: `Perfil del profesor
+                    Doctorado en Ciencias. Especilista en Robótica y visión computacional.
+                    Cinvestav, Unidad Guadalajara
+                    Candidato SNII
+                    Colaborador INTEL
+                     
+                    
+                    PTC. Candidato del SNII. Miguel Bernal Marin estudió la licenciatura en matemáticas en la Universidad de Guadalajara, después ingresó a la maestría en ciencias de la computación en el Centro de Investigación y de Estudios Avanzados del IPN (CINVESTAV) unidad Guadalajara, en donde también realizó su doctorado en ciencias con especialidad en robótica y visión computacional. Actualmente Miguel está trabajando en la compañía Intel en el proyecto de Clear Linux, manteniendo el kernel de Linux para esta distribución y dando soporte a la misma. También es docente del Instituto Tecnológico Superior de Jalisco "Mario Molina Pasquel y Henriquez" unidad Zapopan, dando clases en la Ingenieria en Sistemas computacionales y en la maestría de sistemas computacionales.
+                    Profesor PTC. Especilista en Robótica y visión computacional.
+                    3 patente
+                    1 capítulo
+                    4 asesorías de proyectos
+                    6 artículos
+                    4 conferencias
+                    20 Contribuciones con software libre
+                    `
+    },
+    {
+      id: 3,
+      name: 'Federico A. Arias Zambrano',
+      image: '../assets/img/academico-3.webp',
+      description: ''
+    },
+    {
+      id: 4,
+      name: 'José Antonio Aviña Méndez',
+      image: '../assets/img/academico-4.webp',
+      description: ''
+    },
+    {
+      id: 5,
+      name: 'Adriana Tovar Arriaga',
+      image: '../assets/img/academico-5.webp',
+      description: `Profesora
+                    Ingeniera en Sistemas Computacionales, tras años de experiencia en el área industrial automotriz, decidí dar un giro a mi carrera para orientarme a la educación en ingeniería en la cuál tengo 14 años de experiencia. Estoy convencida que es la educación, investigación y desarrollo de tecnología propia llevaría a un progreso real y competitivo a nuestro país.`
+    }
+  ];
+
+  openModal(id: number) {
+    const teacher = this.teachers.find(t => t.id === id);
+    this.modalContent = teacher ? teacher.description : '';
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
 
   isMenuOpen = false;
 

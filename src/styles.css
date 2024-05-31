@@ -352,7 +352,6 @@
 /* Details */
 .admisiones {
     background: var(--light);
-    border: 1px solid var(--dark);
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
@@ -390,7 +389,90 @@
     text-decoration: underline;
 }
 
+/*** Gobierno ***/
+.div-enlaces-gobierno {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: -.3%;
+    border-top: .7vh solid #fff;
+    padding: 1%;
+    background-image: url(http://tecmm.edu.mx/imagesReact/images/linksFooter/fondoFooterGob.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.div-enlaces-gobierno a {
+    line-height: 20px;
+    color: #fff
+}
 
+.img-gobMx {
+    width: 30%;
+    height: 10%;
+    margin-top: -1%;
+    padding: 2%
+}
+
+.div-enlaces {
+    display: block;
+    height: auto
+}
+
+.div-enlaces,.div-QueEsGob {
+    width: 33%
+}
+
+.div-Contacto,.div-enlaces,.div-QueEsGob {
+    text-align: left;
+    font-size: 1.5vh;
+    font-family: Gotham-Book
+}
+.div-menuGobMx {
+    width: 100%;
+    height: 5vh;
+    background-color: #0b231e;
+    position: relative
+}
+
+.div-menuGobMx img {
+    height: 70%;
+    margin: .5%;
+    position: absolute;
+    left: 0
+}
+
+.div-linksMenuGobMx {
+    position: absolute;
+    right: 0;
+    width: auto;
+    height: 100%
+}
+
+.div-linksMenuGobMx a {
+    color: #fff
+}
+
+.div-linksMenuGobMx ul {
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none
+}
+
+.div-linksMenuGobMx li {
+    height: 100%;
+    color: #fff;
+    padding: 10px;
+    font-size: 2vh;
+    cursor: pointer;
+    font-family: Gotham-Book
+}
+
+.div-linksMenuGobMx li:hover {
+    background-color: #fff;
+    opacity: .6;
+    color: #000;
+    font-family: Gotham-Book
+}
 
 /*** Booking ***/
 .video {
@@ -602,13 +684,13 @@
     margin-bottom: 20px;
 }
 
-.image-container {
+ .image-container {
     position: relative;
-    width: 250px; /* Ancho del rectángulo */
-    height: 350px; /* Alto del rectángulo */
+    width: 250px;
+    height: 350px; 
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 10px; /* Opcional: redondear las esquinas del rectángulo */
+    border-radius: 10px; 
     background-color: #f8f9fa;
 }
 
@@ -616,10 +698,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; 
 }
 
-.image-container .hover-effect {
+.image-container img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+/* .image-container .hover-effect {
     position: absolute;
     top: 0;
     left: 0;
@@ -633,8 +721,8 @@
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del contenedor */
-    overflow: auto; /* Permite el scroll si el contenido es demasiado grande */
+    box-sizing: border-box;  
+    overflow: auto;  
 }
 
 .image-container .hover-effect .inner-content {
@@ -642,8 +730,8 @@
     text-align: center;
     transform: translateY(20px);
     transition: transform 0.3s ease;
-    max-height: 100%; /* Asegura que el contenido se ajuste al contenedor */
-    overflow: auto; /* Permite el scroll si el contenido es demasiado grande */
+    max-height: 100%; 
+    overflow: auto; 
 }
 
 .image-container:hover img {
@@ -656,7 +744,66 @@
 
 .image-container:hover .hover-effect .inner-content {
     transform: translateY(0);
-}
+} */
+
+/* Estilo para el modal */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-dialog-centered {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    z-index: 1050; 
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .btn-close {
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #000;
+    opacity: 0.5;
+  }
+  
+  .btn-close:hover {
+    opacity: 0.75;
+  }
+  
+  
+
 
 /* Animación de aparición */
 .wow {
@@ -739,6 +886,7 @@
 .footer .copyright a {
     color: var(--light);
 }
+
 
 .nav-bar {
     background-color: #fff;

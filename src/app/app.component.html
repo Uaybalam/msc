@@ -9,16 +9,6 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
@@ -40,6 +30,7 @@
 </head>
 
 <body>
+    <div class="div-menuGobMx"><img src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg"><div class="div-linksMenuGobMx"><ul><li> <a target="_blank" href="https://www.gob.mx/gobierno">Gobierno</a> </li><li> <a target="_blank" href="https://www.participa.gob.mx/">Participa</a> </li><li> <a target="_blank" href="https://datos.gob.mx/">Datos</a> </li><li> <a target="_blank" href="https://www.gob.mx/gobierno"><i class="search icon"></i></a> </li></ul></div></div>
     <!-- Topbar Start -->
     <div class="logo-container">
         <a href="" class="navbar-brand m-0 p-0">
@@ -93,6 +84,7 @@
   </div>
 </div>
 </div>
+
 
     <!-- Navbar End -->
 
@@ -289,7 +281,11 @@
         </div>
     </div>
     <!-- Service End -->
-    <section id="details"></section>
+    <div class="container-xxl py-5" id="details">
+        <div class="container">
+            <img src="../assets/img/banner-tecmm-footer.webp" width="100%" alt="TECMM">
+        </div>
+    </div>
     <!-- Adminision Start -->
     <section>
         <div class="admisiones" >
@@ -381,98 +377,44 @@
                 <h1 class="text-center h1 mb-5">Nucleo Academico</h1>
             </div>
             <div id="owl-carousel1" class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <div class="image-container">
-                        <img src="../assets/img/academico-1.webp">
+                <div class="testimonial-item text-center" *ngFor="let teacher of teachers">
+                    <div class="image-container" (click)="openModal(teacher.id)">
+                        <img [src]="teacher.image">
                         <div class="hover-effect">
-                            <div class="inner-content">
+                            <div class="inner-content" [id]="'inner-content-' + teacher.id">
                                 <div class="mb-2">
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
+                                    <p>{{ teacher.description }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <h5>Miriam Díaz Rodríguez</h5>
+                    <h5>{{ teacher.name }}</h5>
                 </div>
-                <div class="testimonial-item text-center">
-                    <div class="image-container">
-                        <img src="../assets/img/academico-2.webp">
-                        <div class="hover-effect">
-                            <div class="inner-content">
-                                <div class="mb-2">
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div *ngIf="isModalOpen" class="modal-backdrop">
+            <div class="modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Información del Profesor</h5>
+                        <button type="button" class="btn-close" (click)="closeModal()"></button>
                     </div>
-                    <h5>Miguel Bernal Marin</h5>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="image-container">
-                        <img src="../assets/img/academico-3.webp">
-                        <div class="hover-effect">
-                            <div class="inner-content">
-                                <div class="mb-2">
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Federico A. Arias Zambrano</h5>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="image-container">
-                        <img src="../assets/img/academico-4.webp">
-                        <div class="hover-effect">
-                            <div class="inner-content">
-                                <div class="mb-2">
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                    <small class="fa fa-star text-secondary"></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>José Antonio Aviña Méndez</h5>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="image-container">
-                        <img src="../assets/img/academico-5.webp">
-                        <div class="hover-effect">
-                            <div class="inner-content">
-                                <div class="mb-2">
-                                    <p>
-                                        Profesora
-
-                                        Ingeniera en Sistemas Computacionales, tras años de experiencia en el área industrial automotriz, decidí dar un giro a mi carrera para orientarme a la educación en ingeniería en la cuál tengo 14 años de experiencia. Estoy convencida que es la educación, investigación y desarrollo de tecnología propia llevaría a un progreso real y competitivo a nuestro país.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h5>Adriana Tovar Arriaga</h5>
+                    <div class="modal-body" [innerHTML]="modalContent"></div>
                 </div>
             </div>
         </div>
     </div>
     
     
+    
     <!-- Testimonial End -->
-
+    <div class="container-xxl py-5">
+        <div class="container">
+            <img src="../assets/img/banner-tecmm-footer.webp" width="100%" alt="TECMM">
+        </div>
+    </div>
 
     <!-- Footer Start -->
     <div id="contacto" class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -517,6 +459,7 @@
             </div>
         </div>
     </div>
+    <div class="div-enlaces-gobierno"><img class="img-gobMx" src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg"><div class="div-enlaces"><h2>Enlaces</h2><ul><li><a href="https://www.gob.mx/accesibilidad">Declaración de accesibilidad</a></li><li><a href="">Aviso de privacidad</a></li><li><a href="https://www.gob.mx/terminos">Términos y condiciones</a></li><li><a href="http://www.ordenjuridico.gob.mx/">Marco jurídico</a></li><li><a href="http://portaltransparencia.gob.mx/buscador/search/search.do?method=begin">Portal de obligaciones y de transparencia</a></li><li><a href="">Sistema infomex</a></li><li><a href="http://inicio.ifai.org.mx/SitePages/ifai.aspx">INAI</a></li><li><a href="https://www.gob.mx/sitemap">Mapa de sitio</a></li></ul></div><div class="div-QueEsGob"><h2>¿Qué es gob.mx?</h2><ul><li><a>Es el portal único de trámites,<br> información y participación ciudadana. </a><a href="https://www.gob.mx/que-es-gobmx">Leer más</a></li><li><a href="https://www.gob.mx/en/index">English</a></li><li><a href="https://www.gob.mx/temas">Temas</a></li><li><a href="http://reformas.gob.mx/">Reformas</a></li></ul></div><div class="div-Contacto"><h2>Contacto</h2><ul><li><a>Ayuda: dudas e información</a><br><a>gobmx@funcionpublica.gob.mx</a><br></li><li><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54">Denuncia contra servidores públicos</a></li></ul></div></div>
     <!-- Footer End -->
 
 
