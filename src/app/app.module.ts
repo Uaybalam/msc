@@ -6,12 +6,10 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
-import { SemblanzaComponent } from './semblanza/semblanza.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SemblanzaComponent
   ],
   imports: [
     BrowserModule,

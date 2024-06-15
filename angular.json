@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/magma-angular",
+            "outputPath": "dist/msc",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -50,6 +50,9 @@
                 "src/lib/tempusdominus/js/moment-timezone.min.js",
                 "src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
                 "src/js/main.js"
+              ],
+              "allowedCommonJsDependencies": [
+                "sweetalert2"
               ]
           },
           "configurations": {

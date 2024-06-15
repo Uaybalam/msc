@@ -5,6 +5,8 @@ import { FormBuilder, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import 'owl.carousel';
+import Swal from 'sweetalert2';
+
 declare var jQuery: any; // Declarar jQuery para evitar errores de tipo
 @Component({
   selector: 'app-root',
@@ -164,7 +166,6 @@ export class AppComponent implements AfterViewInit{
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    console.log("si prende esta madre we")
   }
 
   @ViewChild('contacto', { static: true }) contactoForm!: NgForm;
