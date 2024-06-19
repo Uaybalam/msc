@@ -341,7 +341,7 @@
                 <div class="col-lg-8">
                     <div class="bg-light text-center p-5">
                         <h1 class="mb-4">Contactanos</h1>
-                        <form (ngSubmit)="onSubmit()" #contact="ngForm">
+                        <form contact="ngForm">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input name="nombre" type="text" class="form-control border-0" id="nombre" placeholder="Tu nombre..." [(ngModel)]="datosFacturacion.nombre" required>
@@ -352,11 +352,11 @@
                                 <div class="col-12">
                                     <textarea name="message" rows="6" class="form-control border-0" id="consulta" placeholder="Tu mensaje..." [(ngModel)]="datosFacturacion.message" required></textarea>
                                 </div>
-                                <ngx-recaptcha2
+                                <!-- <ngx-recaptcha2
                                     [siteKey]="'6LdBkKwnAAAAAO1glbTHQ7LrJK4I93lnz_31oYnc'"
-                                    (success)="onHcaptchaSubmit($event)"></ngx-recaptcha2>
+                                    (success)="onHcaptchaSubmit($event)"></ngx-recaptcha2> -->
                                 <div class="col-12">
-                                    <input type="submit" id="form-submit" class="btn" value="Enviar" [disabled]="contact.invalid">
+                                    <!-- <input type="submit" id="form-submit" class="btn" value="Enviar" [disabled]="contact.invalid"> -->
                                 </div>
                             </div>
                         </form>

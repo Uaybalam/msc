@@ -28,8 +28,10 @@
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",
-    "sweetalert2": "^11.11.1",
     "tslib": "^2.3.0",
+    "vit": "^0.0.1",
+    "vite": "^5.3.1",
+    "webpack-dev-middleware": "^7.2.1",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
@@ -37,6 +39,7 @@
     "@angular/cli": "~16.2.1",
     "@angular/compiler-cli": "^16.2.0",
     "@types/jasmine": "~4.3.0",
+    "angular-cli-ghpages": "^2.0.1",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

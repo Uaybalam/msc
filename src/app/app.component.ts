@@ -1,11 +1,9 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { FacturacionServiceService } from 'src/assets/Facturacion-service/facturacion-service.service';
-import { ShowErrorService } from './show-error/show-error.service';
 import { FormBuilder, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import 'owl.carousel';
-import Swal from 'sweetalert2';
 
 declare var jQuery: any; // Declarar jQuery para evitar errores de tipo
 @Component({
@@ -115,7 +113,7 @@ export class AppComponent implements AfterViewInit{
     {
       id: 8,
       name: 'Mtro. Miguel Leon Ramos Corchado',
-      image: '../assets/img/academico-1.webp',
+      image: '../assets/img/academico-8.jpg',
       description: `Maestría
                     Universidad Pedro de Gante/Centro de Investigaciones y Estudios Avanzados del Instituto Politécnico Nacional
                     Perfil Prodep
@@ -170,17 +168,17 @@ export class AppComponent implements AfterViewInit{
 
   @ViewChild('contacto', { static: true }) contactoForm!: NgForm;
 
-  constructor(private facturaService: FacturacionServiceService, private _showservice: ShowErrorService, private _fb: FormBuilder, private router: Router,) {}
-  ngOnInit() {
+  // constructor(private facturaService: FacturacionServiceService, private _showservice: ShowErrorService, private _fb: FormBuilder, private router: Router,) {}
+  // ngOnInit() {
 
-    this.datosFacturacion = this._fb.group({
-      nombre: [null, Validators.required],
-      email: [null, Validators.email],
-      message: [null, Validators.required],
+  //   this.datosFacturacion = this._fb.group({
+  //     nombre: [null, Validators.required],
+  //     email: [null, Validators.email],
+  //     message: [null, Validators.required],
 
-    });
+  //   });
 
-  }
+  // }
   ngAfterViewInit() {
     jQuery('#owl-carousel2').owlCarousel({
       items: 1, // Número de elementos a mostrar
@@ -237,36 +235,36 @@ export class AppComponent implements AfterViewInit{
       }
     });
   }
-  onSubmit() {
-    if (this.captchaResuelto && !this.datosFacturacion.invalid) {
-      this._showservice.showLoading()
-      this.facturaService
-        .enviarDatosFacturacion(this.datosFacturacion, this.captchaToken)
-        .then(
-          (response) => {
-            this._showservice.hideLoading()
-            this._showservice.success("Correo enviado correctamente.")
-            setTimeout(() => {
-              window.location.reload()
-            }, 1000);
-          },
-          (error) => {
-            this._showservice.hideLoading()
-            this._showservice.statusCode(error)
-            setTimeout(() => {
-              window.location.reload()
-            }, 1000);
-          }
-        );
-    }
-    else
-    {
-      this._showservice.nosuccess("Porfavor revisa que el capo de Email(ejemplo@correo.com)")
-    }
-  }
+  // onSubmit() {
+  //   if (this.captchaResuelto && !this.datosFacturacion.invalid) {
+  //     this._showservice.showLoading()
+  //     this.facturaService
+  //       .enviarDatosFacturacion(this.datosFacturacion, this.captchaToken)
+  //       .then(
+  //         (response) => {
+  //           this._showservice.hideLoading()
+  //           this._showservice.success("Correo enviado correctamente.")
+  //           setTimeout(() => {
+  //             window.location.reload()
+  //           }, 1000);
+  //         },
+  //         (error) => {
+  //           this._showservice.hideLoading()
+  //           this._showservice.statusCode(error)
+  //           setTimeout(() => {
+  //             window.location.reload()
+  //           }, 1000);
+  //         }
+  //       );
+  //   }
+  //   else
+  //   {
+  //     this._showservice.nosuccess("Porfavor revisa que el capo de Email(ejemplo@correo.com)")
+  //   }
+  // }
 
-  onHcaptchaSubmit(event: any) {
-    this.captchaResuelto = true;
-    this.captchaToken = event;
-  }
+  // onHcaptchaSubmit(event: any) {
+  //   this.captchaResuelto = true;
+  //   this.captchaToken = event;
+  // }
 }
