@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="utf-8">
-    <title>Posgrados Sistemas</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../assets/img/favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    
-
-</head>
-
-<body>
     <div class="div-menuGobMx"><img src="https://framework-gb.cdn.gob.mx/landing/img/logoheader.svg"><div class="div-linksMenuGobMx"><ul><li> <a target="_blank" href="https://www.gob.mx/gobierno">Gobierno</a> </li><li> <a target="_blank" href="https://www.participa.gob.mx/">Participa</a> </li><li> <a target="_blank" href="https://datos.gob.mx/">Datos</a> </li><li> <a target="_blank" href="https://www.gob.mx/gobierno"><i class="search icon"></i></a> </li></ul></div></div>
     <!-- Topbar Start -->
     <div class="logo-container p-0">
@@ -67,10 +36,10 @@
   <ul class="menu" [ngClass]="{ 'open': isMenuOpen }" >
     <li><a href="index.html" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Inicio</a></li>
     <li><a href="#acercade"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Acerca de</a></li>
-    <li><a href="#servicio"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Mapa Curricular</a></li>
+    <li><a href="#mapa-c"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Mapa Curricular</a></li>
     <li><a href="#details"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Proceso de Admisión</a></li>
     <li><a href="https://edcore.tecmm.mx/alum/login.jsp"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Edcore Alumnos</a></li>
-    <li><a href="#contacto"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Contacto</a></li>
+    <li><a href="#profe"  style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px;">Nucleo Academico</a></li>
   </ul>
   <div class="ocultar">
   <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
@@ -138,11 +107,30 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h6 class="text-secondary text-uppercase">Acerca de</h6>
-                    <h1 class="mb-4">Desde que abrimos nuestras puertas hemos sido parte de la formación profesional de muchísimas personas.</h1>
-                    <p class="mb-4">Nuestro compromiso es ofrecerle una educación de calidad, una excelente capacitación y los recursos necesarios para brillar en el mundo actual. Contamos con planes flexibles y excelentes instructores. Estamos seguros de que estudiar en el Instituto Tecnológico Mario Molina Campus Zapopan le dejará grandes satisfacciones.</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Educación superior tecnológica de excelencia</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Innovación</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Creatividad</p>
+                    <h1 class="mb-4">Formar líderes con sólidos conocimientos en Sistemas Computacionales, competitivos y capaces de desarrollar software que impulse el avance tecnológico y empresarial.</h1>
+                    <p class="mb-4">Nos comprometemos a brindarle educación de calidad, capacitación excelente y los recursos necesarios para destacarse hoy en día. Ofrecemos planes flexibles y contamos con instructores de primer nivel. Estudiar en el Instituto Tecnológico Mario Molina Campus Zapopan le proporcionará grandes satisfacciones, incluyendo la enseñanza de nuevas tecnologías como la IA.</p>
+                    <p class="fw-medium text-primary">
+                        <i class="fa fa-eye text-success me-3"></i>
+                        <a href="" (click)="openProfileModal(); $event.preventDefault();">Ver Perfil de egreso</a>
+                      </p>
+                      <p class="fw-medium text-primary">
+                        <i class="fa fa-eye text-success me-3"></i>
+                        <a href="" (click)="openSkillsModal(); $event.preventDefault();">Ver Habilidades del egresado</a>
+                      </p>
+                      
+                      <!-- Modal -->
+                      <div *ngIf="isModalOpen" class="modal-backdrop">
+                        <div class="modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">{{ modalTitle }}</h5>
+                              <button type="button" class="btn-close" (click)="closeModal()"></button>
+                            </div>
+                            <div class="modal-body" [innerHTML]="modalContent"></div>
+                          </div>
+                        </div>
+                      </div>
+                      
                     <div class="bg-primary d-flex align-items-center p-4 mt-5">
                         <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
                             <i class="fa fa-phone-alt fa-2x text-primary"></i>
@@ -162,7 +150,7 @@
             </div>
         </div>
     </div>
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="mapa-c">
         <div class="container">
             <img src="../assets/img/mapacurricular.png" width="100%" alt="mapacurricular">
         </div>
@@ -221,7 +209,6 @@
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Análisis y diseño de algoritmos</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Tecnologías de programación.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Ingeniería de software.</p>
-                            <a href="" class="btn bg-white text-primary w-100 mt-2">Contactar<i class="fa fa-arrow-right text-secondary ms-2"></i></a>
                         </div>
                         <div class="bg-light p-4" style="margin: 6px;">
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
@@ -242,7 +229,6 @@
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Interfaces humano - computadora.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Sistemas distribuidos.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Sistemas expertos.</p>
-                            <a href="" class="btn bg-white text-primary w-100 mt-2">Contactar<i class="fa fa-arrow-right text-secondary ms-2"></i></a>
                         </div>
                         <div class="bg-light p-4 " style="margin: 6px;">
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
@@ -262,7 +248,6 @@
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Arquitectura de motores de videojuegos II.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Programación concurrente.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Diseño de interfaces.</p>
-                            <a href="" class="btn bg-white text-primary w-100 mt-2">Contactar<i class="fa fa-arrow-right text-secondary ms-2"></i></a>
                         </div>
                         <div class="bg-light p-4" style="margin: 6px;">
                             <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4" style="width: 75px; height: 75px;">
@@ -273,7 +258,6 @@
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Seminario I.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Seminario II.</p>
                             <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Seminario III.</p>
-                            <a href="" class="btn bg-white text-primary w-100 mt-2">Contactar<i class="fa fa-arrow-right text-secondary ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -287,25 +271,25 @@
     </div>
     <!-- Adminision Start -->
     <section>
-        <div class="admisiones p-15" >
+        <div class="admisiones p-15 " style="font-size: 1.25em;">
             <h2>PROCEDIMIENTO DE INGRESO</h2>
-            <p>El procedimiento de selección de aspirantes a la Maestría en Sistemas Computacionales trata de asegurar el manifiesto interés de la persona por cursar este programa de estudios y que demuestre la capacidad, interés y factibilidad de concluirlos hasta la obtención del grado.</p>
+            <p >El procedimiento de selección de aspirantes a la Maestría en Sistemas Computacionales trata de asegurar el manifiesto interés de la persona por cursar este programa de estudios y que demuestre la capacidad, interés y factibilidad de concluirlos hasta la obtención del grado.</p>
             <p>El procedimiento se detalla a continuación:</p>
             <ul>
                 <li>
-                    <strong>Registrar solicitud de aspirante:</strong> Para el ingreso al Instituto Tecnológico José Mario Molina Pasquel y Henríquez Unidad Académica Zapopan se debe ingresar a la plataforma de admisión a través del siguiente enlace: <a href="https://admision.tsj.mx" target="_blank">admision.tsj.mx</a> y registrarse para iniciar su inscripción y poder integrar el expediente digital conforme la documentación solicitada del 6 de mayo al 12 de Julio de 2024.
+                    <strong>Registrar solicitud de aspirante:</strong> Para el ingreso al Instituto Tecnológico José Mario Molina Pasquel y Henríquez Unidad Académica Zapopan se debe ingresar a la plataforma de admisión a través del siguiente enlace: <a href="https://admision.tsj.mx" target="_blank">admision.tsj.mx</a> y registrarse para iniciar su inscripción y poder integrar el expediente digital conforme la documentación solicitada del 6 de mayo al 19 de Julio de 2024.
                 </li>
                 <li>
-                    <strong>Pagar el registro:</strong> Descargar el comprobante de solicitud y realizar el pago del paquete de admisión (Examen de Admisión) por un monto de $1,700.00 (mil setecientos pesos mexicanos) en el banco o por transferencia electrónica, y el recibo de pago resultante deberá ser enviado a <a href="mailto:tesoreria@zapopan.tecmm.edu.mx">tesoreria@zapopan.tecmm.edu.mx</a>. Periodo de pago y registro de solicitudes del 6 de mayo al 12 de Julio de 2024.
+                    <strong>Pagar el registro:</strong> Descargar el comprobante de solicitud y realizar el pago del paquete de admisión (Examen de Admisión) por un monto de $2,000.00 (mil setecientos pesos mexicanos) en el banco o por transferencia electrónica, y el recibo de pago resultante deberá ser enviado a <a href="mailto:tesoreria@zapopan.tecmm.edu.mx">tesoreria@zapopan.tecmm.edu.mx</a>. Periodo de pago y registro de solicitudes del 6 de mayo al 19 de Julio de 2024.
                 </li>
                 <li>
-                    <strong>Entrevista con el Comité de Admisión:</strong> La finalidad es conocer la intención, motivación y razones por las que el aspirante desea ingresar al posgrado. Además, se trata de determinar la factibilidad de concluir con la totalidad de sus créditos para la obtención del grado en los tiempos y las formas, que determina el programa. Se contactará al aspirante vía telefónica para concertar la cita. Periodo para la presentación de entrevista del 06 de mayo al 12 de Julio de 2024.
+                    <strong>Entrevista con el Comité de Admisión:</strong> La finalidad es conocer la intención, motivación y razones por las que el aspirante desea ingresar al posgrado. Además, se trata de determinar la factibilidad de concluir con la totalidad de sus créditos para la obtención del grado en los tiempos y las formas, que determina el programa. Se contactará al aspirante vía telefónica para concertar la cita. Periodo para la presentación de entrevista del 06 de mayo al 19 de Julio de 2024.
                 </li>
                 <li>
-                    <strong>Curso propedéutico:</strong> La Unidad Académica correspondiente enviará información respecto a las fechas y formas en que se llevará a cabo. Curso propedéutico del 15 de Julio al 26 de julio de 2024.
+                    <strong>Curso propedéutico:</strong> La Unidad Académica correspondiente enviará información respecto a las fechas y formas en que se llevará a cabo. Curso propedéutico fecha por definir.
                 </li>
                 <li>
-                    <strong>Realizar el examen de admisión EXANI III:</strong> Aplicación de examen de admisión viernes 16 de agosto de 2024 a las 09:00 hrs.
+                    <strong>Realizar el examen de admisión EXANI III:</strong> Aplicación de examen de admisión 19 de julio de 2024.
                 </li>
                 <li>
                     <strong>Deliberación y entrega de documentación final:</strong> Además de subir la documentación a la página <a href="https://admision.tsj.mx" target="_blank">admision.tsj.mx</a>, se deberá entregar la documentación del expediente en la oficina de la División de Sistemas de la Unidad Académica Zapopan. La Comisión de Admisión emitirá una carta de aceptación o rechazo del aspirante y se le notificará. Periodo de emisión de cartas de aceptación del 19 de agosto de 2024.
@@ -321,11 +305,11 @@
             <p>La duración del programa de la Maestría en Sistemas Computacionales es de cuatro semestres, los cuales serán contados a partir del momento de inscripción.</p>
             <h2>COSTOS</h2>
             <ul>
-                <li>Solicitud de Trámites de ingreso (pago único): $1,700.00 (pesos mexicanos).</li>
+                <li>Solicitud de Trámites de ingreso (pago único): $2,000.00 (pesos mexicanos).</li>
                 <li>Matrícula semestral: $8,000.00</li>
             </ul>
             <h2>CONTACTOS PARA INFORMACIÓN</h2>
-            <p>División de investigación y posgrado: Teléfono: 3336821180 ext. 122. Correo electrónico: <a href="mailto:maestria.sistemas@zapopan.tecmm.edu.mx">maestria.sistemas@zapopan.tecmm.edu.mx</a></p>
+            <p>División de investigación y posgrado: Teléfono: 3336821180 ext. 2041. Correo electrónico: <a href="mailto:maestria.sistemas@zapopan.tecmm.edu.mx">maestria.sistemas@zapopan.tecmm.edu.mx</a> <a href="">nancy.ruiz.zapopan</a></p>
         </div>
     </section>
     <!-- Adminision End -->
@@ -368,7 +352,7 @@
     <!-- Contact Form End -->
 
     <!-- Testimonial start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-xxl py-5 wow fadeInUp" id="profe" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
                 <h6 class="text-center h6">Profesores</h6>
@@ -463,6 +447,3 @@
 
 
 
-</body>
-
-</html>
