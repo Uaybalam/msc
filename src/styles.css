@@ -312,7 +312,7 @@
 
 /*** Facts ***/
 .fact {
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(src/assets/img/bg.jpg) center center no-repeat;
+    background: linear-gradient(45deg, #FF4D63, #32169B);
     background-size: cover;
 }
 
@@ -351,15 +351,15 @@
 
 /* Details */
 .admisiones {
-    background: var(--light);
+    background: #F6F5F5;
     border-radius: 5px;
-    padding: 20px;
+    font-size: 1.25em;
+    text-align:justify;
+    padding: 5em;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .admisiones h2 {
-    font-size: 1.5em;
     font-weight: 600; /* Equivalente a .fw-medium */
     color: var(--primary);
     margin-bottom: 15px;
