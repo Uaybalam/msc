@@ -661,7 +661,6 @@
 
 
 /*** Testimonial ***/
-
 .container-xxl {
     max-width: 1200px;
     margin: 0 auto;
@@ -690,8 +689,7 @@
     height: 350px; 
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 10px; 
-    background-color: #f8f9fa;
+    border-radius: 8px; 
 }
 
 .image-container img {
@@ -705,6 +703,16 @@
     cursor: pointer;
     transform: scale(1.1);
 
+}
+.profesor {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    height: 450px;
+    text-align: center;
+    background: linear-gradient(45deg, #FF4D63, #32169B);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* .image-container .hover-effect {
@@ -835,6 +843,8 @@
 
 
 /*** Footer ***/
+
+
 .footer .btn.btn-social {
     margin-right: 5px;
     width: 35px;
