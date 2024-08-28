@@ -8,17 +8,31 @@
     --dark: #308fff;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Keeps existing overflow-x rule for body */
+    font-family: 'Montserrat', sans-serif; /* Keeps existing font-family rule for body */
+    font-size: 1rem; /* Keeps existing font-size rule for body */
+    font-weight: 400; /* Keeps existing font-weight rule for body */
+    line-height: 1.5; /* Keeps existing line-height rule for body */
+    color: #6C7176; /* Keeps existing color rule for body */
+    background-color: #fff; /* Keeps existing background-color rule for body */
+    -webkit-text-size-adjust: 100%; /* Keeps existing text-size-adjust rule for body */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Keeps existing tap-highlight-color rule for body */
+  }
+
 .fw-medium {
     font-weight: 600 !important;
 }
 
-.back-to-top {
+/* .back-to-top {
     position: fixed;
     display: none;
     right: 45px;
     bottom: 45px;
     z-index: 99;
-}
+} */
 
 
 /*** Spinner ***/
@@ -381,15 +395,32 @@
 }
 
 .admisiones a {
-    color: var(--secondary);
+    color: var(--dark);
     text-decoration: none;
 }
 
 .admisiones a:hover {
     text-decoration: underline;
 }
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .admisiones {
+        font-size: 1em; /* Slightly smaller font size */
+        padding: 4em; /* Reduced padding */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .admisiones {
+        font-size: 0.875em; /* Further reduce font size for small screens */
+        padding: 2em; /* Further reduce padding */
+        text-align: left; /* Optional: Change text alignment if needed */
+    }
+}
 
 /*** Gobierno ***/
+
 .div-enlaces-gobierno {
     display: -ms-flexbox;
     display: flex;
@@ -472,6 +503,22 @@
     opacity: .6;
     color: #000;
     font-family: Gotham-Book
+}
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .div-enlaces-gobierno {
+        font-size: 1em; /* Slightly smaller font size */
+        padding: 4em; /* Reduced padding */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .div-enlaces-gobierno {
+        font-size: 0.875em; /* Further reduce font size for small screens */
+        padding: 2em; /* Further reduce padding */
+        text-align: left; /* Optional: Change text alignment if needed */
+    }
 }
 
 /*** Booking ***/
@@ -709,7 +756,7 @@
     border-radius: 8px;
     padding: 16px;
     margin: 16px;
-    height: 450px;
+    height: 500px;
     text-align: center;
     background: linear-gradient(45deg, #FF4D63, #32169B);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -759,7 +806,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1040;
+    z-index: 11000;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0, 0.5);
@@ -942,6 +989,87 @@
 .menu a:hover {
     color: #007bff; /* Azul clarito */
 }
+/* Estilos generales para dispositivos pequeños (móviles) */
+@media (max-width: 576px) {
+    /* Ajustes para el contenedor principal en dispositivos móviles */
+    #contacto .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustes para la columna de la dirección */
+    #contacto .row {
+        flex-direction: column;
+    }
+
+    /* Ajuste del ancho del iframe (Google Maps) */
+    #contacto iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    /* Ajustes para los botones de redes sociales */
+    .footer .btn.btn-social {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    /* Ajuste de tamaño del texto de los enlaces */
+    .footer .btn.btn-link {
+        font-size: 14px;
+    }
+
+    /* Ajuste del tamaño de texto en la sección de copyright */
+    .footer .copyright {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+/* Estilos para dispositivos medianos (tabletas) */
+@media (max-width: 768px) {
+    /* Ajustes para el contenedor principal */
+    #contacto .container {
+        flex-direction: column;
+    }
+
+    /* Ajustes para las columnas */
+    #contacto .row {
+        flex-direction: column;
+    }
+
+    /* Ajuste del tamaño de los botones sociales */
+    .footer .btn.btn-social {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Ajuste de tamaño del texto de los enlaces */
+    .footer .btn.btn-link {
+        font-size: 15px;
+    }
+}
+
+/* Estilos para pantallas grandes (desktops) */
+@media (min-width: 992px) {
+    /* Ajustes para asegurar que el diseño de escritorio se vea bien */
+    #contacto .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Asegura que el contenido no se desborde en pantallas grandes */
+    #contacto .row {
+        flex-direction: column;
+    }
+
+    /* Ajuste del ancho del iframe (Google Maps) */
+    #contacto iframe {
+        width: 100%;
+    }
+}
+
 
 /* Estilos para el menú de hamburguesa en pantallas pequeñas */
 @media (max-width: 991px) {

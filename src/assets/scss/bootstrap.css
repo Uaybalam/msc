@@ -46,18 +46,19 @@
   }
 }
 
-body {
+html, body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #6C7176;
-  background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  overflow-x: hidden; /* Keeps existing overflow-x rule for body */
+  font-family: 'Montserrat', sans-serif; /* Keeps existing font-family rule for body */
+  font-size: 1rem; /* Keeps existing font-size rule for body */
+  font-weight: 400; /* Keeps existing font-weight rule for body */
+  line-height: 1.5; /* Keeps existing line-height rule for body */
+  color: #6C7176; /* Keeps existing color rule for body */
+  background-color: #fff; /* Keeps existing background-color rule for body */
+  -webkit-text-size-adjust: 100%; /* Keeps existing text-size-adjust rule for body */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Keeps existing tap-highlight-color rule for body */
 }
-
 hr {
   margin: 1rem 0;
   color: inherit;
